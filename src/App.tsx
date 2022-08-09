@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  function handleSubmit(e) {
+  function handleSubmit(e:any) {
     e.preventDefault();
     console.log('You clicked submit.');
   }
