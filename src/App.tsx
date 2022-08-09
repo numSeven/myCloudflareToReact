@@ -3,10 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log('You clicked submit.');
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <button onSubmit={handleSubmit}>点一下</button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
