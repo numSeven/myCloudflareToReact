@@ -1,17 +1,19 @@
 // import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import HTTP from "axios"
 
 function App() {
   function handleSubmit(e:any) {
-    e.preventDefault();
+    // e.preventDefault();
     console.log('You clicked submit.');
+    HTTP.get('/api')
   }
   return (
     <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <button onSubmit={handleSubmit}>点一下</button>
+        <button onClick={handleSubmit}>点一下</button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
