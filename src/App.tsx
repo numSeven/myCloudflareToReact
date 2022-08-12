@@ -1,19 +1,25 @@
 // import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import HTTP from "axios"
+import Axios from "axios"
 
 function App() {
-  function handleSubmit(e:any) {
+  function getData(e:any) {
     // e.preventDefault();
-    console.log('You clicked submit.');
-    HTTP.get('/api')
+    Axios.get('/api/getData',{params:{name:'aaa'}})
   }
+  function setData(e:any) {
+    // e.preventDefault();
+    Axios.post('/api/setData',{name:'aaa',val:123})
+  }
+  let  a = []
+  console.log(a.length);
   return (
     <div className="App">
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <button onClick={handleSubmit}>点一下</button>
+        <button onClick={getData}>获取数据</button>
+        <button onClick={setData}>提交数据</button>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
