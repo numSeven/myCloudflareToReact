@@ -11,8 +11,9 @@ function App() {
   }
   function setData(e:any) {
     // e.preventDefault();
-    // Axios.post('/api/setData',{name:'aaa',val:'dddd'})
-    Axios.post('https://mycloudflare_init.11980762821814.workers.dev/api/setData',{name:'aaa',val:'123'})
+    // Axios.get('/api/setData')
+    // Axios.post('https://mycloudflare_init.11980762821814.workers.dev/api/setData',{name:'aaa',val:'123'})
+    Axios.get('https://mycloudflare_init.11980762821814.workers.dev/api/setData')
   }
   let  a = []
   console.log(a.length);
